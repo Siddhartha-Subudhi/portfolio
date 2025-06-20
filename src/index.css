@@ -1,0 +1,45 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --background: 0 0% 100%;
+    --foreground: 222.2 98% 10%;
+    --primary: 350 90% 48%;
+    --primary-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --accent: 2 100% 80%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --border: 0 86% 85%;
+    --input: 0 70% 92%;
+    --ring: 350 90% 48%;
+    --radius: 0.5rem;
+  }
+  body {
+    @apply bg-background text-primary font-sans min-h-screen transition-colors duration-700;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: color 0.7s;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    @apply opacity-0;
+    animation: fade-in 0.72s cubic-bezier(0.4,0,0.2,1) forwards;
+  }
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+}
+
